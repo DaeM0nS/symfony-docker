@@ -1,5 +1,7 @@
 # Symfony development environment with Docker
 
+> Ce README est disponible [en français](./README.fr.md)
+
 This project aims to simplify setting up a development-ready
 environment for Symfony.
 
