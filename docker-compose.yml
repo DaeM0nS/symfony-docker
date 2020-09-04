@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  db:
+    image: mariadb:10
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+    volumes:
+      - db_data:/var/lib/mysql
+  app:
+    build:
+      context: .
+      args:
+        UID: 1000
+    ports:
+      - 8000:8000
+    volumes:
+      - ./work:/home/user/work
+
+volumes:
+  db_data: {}
